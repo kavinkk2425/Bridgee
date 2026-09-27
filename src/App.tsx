@@ -50,11 +50,9 @@ export default function App() {
 
     const el = document.getElementById(tabId);
     if (el) {
-      const navOffset = 76;
-      const elementTop = el.getBoundingClientRect().top + window.pageYOffset;
-      window.scrollTo({
-        top: Math.max(0, elementTop - navOffset),
-        behavior: 'smooth'
+      el.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
       });
     }
   };

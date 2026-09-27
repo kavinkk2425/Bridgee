@@ -23,9 +23,31 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'survey', label: 'Student Survey' },
   ];
 
-  const handleNavClick = (id: string) => {
-    setActiveTab(id);
+  const handleNavClick = (id: string, e?: React.MouseEvent) => {
+    if (e) {
+      e.preventDefault();
+    }
+    const wasOpen = mobileMenuOpen;
     setMobileMenuOpen(false);
+
+    const triggerScroll = () => {
+      setActiveTab(id);
+      if (id === 'about') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
+
+    if (wasOpen) {
+      // Delay scroll execution until mobile drawer finishes collapsing
+      setTimeout(triggerScroll, 120);
+    } else {
+      triggerScroll();
+    }
   };
 
   return (
@@ -35,8 +57,9 @@ export const Navbar: React.FC<NavbarProps> = ({
           
           {/* Left Brand Area */}
           <div className="flex items-center gap-2 min-w-0">
-            <button
-              onClick={() => handleNavClick('about')}
+            <a
+              href="#about"
+              onClick={(e) => handleNavClick('about', e)}
               className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none cursor-pointer text-left min-w-0"
             >
               {/* Official Club Logo Emblem */}
@@ -56,7 +79,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   Learn · Grow · Build Together
                 </span>
               </div>
-            </button>
+            </a>
           </div>
 
           {/* Center Navigation Links (Desktop) */}
@@ -64,9 +87,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             {navLinks.map((link) => {
               const isActive = activeTab === link.id;
               return (
-                <button
+                <a
                   key={link.id}
-                  onClick={() => handleNavClick(link.id)}
+                  href={`#${link.id}`}
+                  onClick={(e) => handleNavClick(link.id, e)}
                   className={`px-3.5 py-2 xl:px-4 xl:py-2 rounded-full text-xs xl:text-sm font-bold tracking-wide transition-all cursor-pointer whitespace-nowrap relative font-sans ${
                     isActive
                       ? 'bg-blue-50 text-blue-600 font-extrabold shadow-2xs'
@@ -80,7 +104,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       className="absolute bottom-0 left-3 right-3 h-0.5 bg-blue-600 rounded-full"
                     />
                   )}
-                </button>
+                </a>
               );
             })}
           </nav>
@@ -105,15 +129,16 @@ export const Navbar: React.FC<NavbarProps> = ({
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.25, ease: 'easeInOut' }}
+              transition={{ duration: 0.2, ease: 'easeOut' }}
               className="lg:hidden bg-white border-b border-slate-200 px-4 py-5 space-y-4 shadow-xl"
             >
               <div className="flex flex-col gap-1.5">
                 {navLinks.map((item) => (
-                  <button
+                  <a
                     key={item.id}
-                    onClick={() => handleNavClick(item.id)}
-                    className={`py-2.5 px-4 text-left rounded-xl text-xs font-bold tracking-wide transition-colors font-sans flex items-center justify-between ${
+                    href={`#${item.id}`}
+                    onClick={(e) => handleNavClick(item.id, e)}
+                    className={`py-2.5 px-4 text-left rounded-xl text-xs font-bold tracking-wide transition-colors font-sans flex items-center justify-between cursor-pointer ${
                       activeTab === item.id
                         ? 'bg-blue-50 text-blue-600 font-extrabold'
                         : 'text-slate-700 hover:bg-slate-50'
@@ -121,7 +146,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   >
                     <span>{item.label}</span>
                     {activeTab === item.id && <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />}
-                  </button>
+                  </a>
                 ))}
               </div>
             </motion.div>
