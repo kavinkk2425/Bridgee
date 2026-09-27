@@ -1,0 +1,6 @@
+{
+  "name": "Bridge Club - Alumni Mentorship & Inauguration Portal",
+  "description": "Official Inauguration Platform and Alumni Mentorship Hub for Bridge Club, connecting students with alumni for mock interviews, career guidance, resume rebuilding, and job referrals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
