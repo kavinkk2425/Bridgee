@@ -12,7 +12,7 @@ const roleIcons: Record<string, React.ElementType> = {
 
 export const RolesResponsibilitiesSection: React.FC = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14" id="roles">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 scroll-mt-24" id="roles">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto space-y-2.5 sm:space-y-3 mb-10 sm:mb-14">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-violet-50 border border-violet-150 text-violet-600 text-[10px] sm:text-xs font-extrabold uppercase tracking-wider">

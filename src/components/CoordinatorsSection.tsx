@@ -13,7 +13,7 @@ export const CoordinatorsSection: React.FC = () => {
     : CLUB_COORDINATORS.filter(c => c.category === selectedFilter);
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="coordinators">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 scroll-mt-24" id="coordinators">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto space-y-3 mb-8 sm:mb-10">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-150 text-emerald-600 text-xs font-extrabold uppercase tracking-wider font-sans">

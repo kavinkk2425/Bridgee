@@ -40,7 +40,7 @@ export const HeroInauguration: React.FC<HeroInaugurationProps> = ({
   const whyIcons = [Users, Handshake, TrendingUp, Network];
 
   return (
-    <div className="space-y-16 sm:space-y-24 pt-4 sm:pt-8 pb-8 overflow-hidden" id="about">
+    <div className="space-y-16 sm:space-y-24 pt-4 sm:pt-8 pb-8 overflow-hidden scroll-mt-24" id="about">
 
       {/* ========================================================================= */}
       {/* HERO SECTION - THE BRIDGE CLUB */}
@@ -342,8 +342,8 @@ export const HeroInauguration: React.FC<HeroInaugurationProps> = ({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.15 }}
         transition={{ duration: 0.7 }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8"
-        id="survey"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 scroll-mt-24"
+        id="survey-highlight"
       >
         <div className="bg-gradient-to-br from-blue-900 via-indigo-950 to-slate-950 text-white rounded-3xl p-6 sm:p-12 shadow-xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
