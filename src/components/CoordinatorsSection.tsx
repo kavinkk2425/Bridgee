@@ -109,7 +109,7 @@ export const CoordinatorsSection: React.FC = () => {
                 <optgroup key={category} label={`── ${category} ──`}>
                   {coords.map(coord => (
                     <option key={coord.id} value={coord.id}>
-                      #{coord.sNo} {coord.name} ({coord.role})
+                      {coord.sNo}. {coord.name} ({coord.role})
                     </option>
                   ))}
                 </optgroup>
@@ -189,7 +189,7 @@ export const CoordinatorsSection: React.FC = () => {
                   <div className="space-y-1 min-w-0 flex-1">
                     <div className="flex items-center gap-1.5 flex-wrap">
                       <span className="inline-block text-[9px] sm:text-[10px] font-black uppercase px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-100 font-sans tracking-wide">
-                        #{coord.sNo}
+                        No. {coord.sNo}
                       </span>
                       <span className="text-[10px] font-bold text-slate-500 font-sans truncate">
                         {coord.category}
