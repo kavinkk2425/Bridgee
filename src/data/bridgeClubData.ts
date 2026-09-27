@@ -1,5 +1,5 @@
 import officialClubLogo from '../assets/images/official_club_logo.jpg';
-import officialEventPoster from '../assets/images/official_event_poster.png';
+import officialEventPoster from '../assets/images/official_event_poster.jpg';
 
 export interface SurveyOption {
   id: string;
@@ -72,16 +72,16 @@ export interface RoleResponsibility {
 }
 
 export const OFFICIAL_POSTER_INFO = {
-  institution: 'Government College of Engineering, Erode',
+  institution: 'Government College of Engineering, (Formerly IRTT), Erode',
   tagline: 'LEARN | GROW | BUILD TOGETHER',
-  association: "IRTT Alumni Association — Synergize · Support · Serve · Let's Connect...",
+  association: "IRTT Alumni Association — Support · Support · Serve · Let's Connect...",
   clubName: 'THE Bridge Club',
   motto: 'Knowledge Today, Success Tomorrow',
   subMotto: 'Together We Learn · Together We Grow',
   mission: 'A student-led club that connects students, staff and alumni to accelerate learning, careers and opportunities.',
   logoImage: officialClubLogo,
   posterImage: officialEventPoster,
-  eventDate: '28th Sep (Monday)',
+  eventDate: '28th Sep 26 (Monday)',
   eventTime: '9.30 AM – 12.30 PM',
   eventVenue: 'AUDITORIUM Government College of Engineering - Erode',
   triRoles: {
