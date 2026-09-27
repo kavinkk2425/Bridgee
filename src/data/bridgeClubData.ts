@@ -641,7 +641,6 @@ export const INAUGURATION_DETAILS = {
   venue: 'AUDITORIUM, Government College of Engineering - Erode',
   expectedAttendees: '600+ Students, Alumni Mentors & Faculty',
   surveyResponseCount: 555,
-  contactEmail: 'bridgeclub@gceerode.ac.in',
   socials: {
     linkedin: 'https://linkedin.com/company/bridge-club-gce-erode',
     instagram: 'https://instagram.com/bridgeclub_gceerode',

@@ -100,11 +100,6 @@ export const Footer: React.FC<FooterProps> = ({
                   (Formerly IRTT Erode)
                 </span>
               </li>
-              <li>
-                <a href="mailto:bridgeclub@gceerode.ac.in" className="hover:text-blue-600 transition-colors">
-                  bridgeclub@gceerode.ac.in
-                </a>
-              </li>
             </ul>
           </div>
 

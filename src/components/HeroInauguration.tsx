@@ -87,8 +87,8 @@ export const HeroInauguration: React.FC<HeroInaugurationProps> = ({
                   className="w-full h-full object-contain rounded-full bg-white"
                 />
               </div>
-              <span className="text-[10px] sm:text-xs font-extrabold tracking-[0.14em] sm:tracking-[0.18em] text-blue-600 uppercase font-sans break-words">
-                GOVERNMENT COLLEGE OF ENGINEERING, ERODE
+              <span className="text-[10px] sm:text-xs font-extrabold tracking-[0.12em] sm:tracking-[0.16em] text-blue-600 uppercase font-sans break-words">
+                GOVERNMENT COLLEGE OF ENGINEERING, ERODE (FORMERLY IRTT)
               </span>
             </motion.div>
 
