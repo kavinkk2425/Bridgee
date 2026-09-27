@@ -1,5 +1,4 @@
 import React from 'react';
-import { INAUGURATION_DETAILS } from '../data/bridgeClubData';
 import officialClubLogo from '../assets/images/official_club_logo.jpg';
 
 interface FooterProps {
@@ -105,22 +104,10 @@ export const Footer: React.FC<FooterProps> = ({
 
         </div>
 
-        {/* Bottom Copyright & Socials */}
-        <div className="pt-8 border-t border-slate-150 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400 font-sans">
+        {/* Bottom Copyright */}
+        <div className="pt-8 border-t border-slate-150 flex items-center justify-center text-center text-[11px] text-slate-400 font-sans">
           <div>
             © 2026 The Bridge Club — Government College of Engineering, (Formerly IRTT), Erode.
-          </div>
-
-          <div className="flex items-center gap-6">
-            <a href={INAUGURATION_DETAILS.socials.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
-              LinkedIn
-            </a>
-            <a href={INAUGURATION_DETAILS.socials.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
-              Instagram
-            </a>
-            <a href={INAUGURATION_DETAILS.socials.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
-              Twitter
-            </a>
           </div>
         </div>
 
