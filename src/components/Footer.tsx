@@ -1,5 +1,6 @@
 import React from 'react';
 import { INAUGURATION_DETAILS } from '../data/bridgeClubData';
+import officialClubLogo from '../assets/images/official_club_logo.jpg';
 
 interface FooterProps {
   setActiveTab: (tab: string) => void;
@@ -20,7 +21,7 @@ export const Footer: React.FC<FooterProps> = ({
             <div className="flex items-center gap-3">
               <div className="relative w-11 h-11 rounded-full p-0.5 bg-gradient-to-tr from-amber-400 via-blue-600 to-indigo-700 shadow-md shadow-blue-500/25 shrink-0 overflow-hidden">
                 <img
-                  src="/src/assets/images/official_club_logo.jpg"
+                  src={officialClubLogo}
                   alt="The Bridge Club Official Logo"
                   className="w-full h-full object-contain rounded-full bg-white"
                 />

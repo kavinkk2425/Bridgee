@@ -1,3 +1,6 @@
+import officialClubLogo from '../assets/images/official_club_logo.jpg';
+import officialEventPoster from '../assets/images/official_event_poster.png';
+
 export interface SurveyOption {
   id: string;
   title: string;
@@ -74,8 +77,8 @@ export const OFFICIAL_POSTER_INFO = {
   motto: 'Knowledge Today, Success Tomorrow',
   subMotto: 'Together We Learn · Together We Grow',
   mission: 'A student-led club that connects students, staff and alumni to accelerate learning, careers and opportunities.',
-  logoImage: '/src/assets/images/official_club_logo.jpg',
-  posterImage: '/src/assets/images/official_event_poster.png',
+  logoImage: officialClubLogo,
+  posterImage: officialEventPoster,
   eventDate: '28th Sep (Monday)',
   eventTime: '9.30 AM – 12.30 PM',
   eventVenue: 'AUDITORIUM Government College of Engineering - Erode',

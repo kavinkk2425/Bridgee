@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X } from 'lucide-react';
+import officialClubLogo from '../assets/images/official_club_logo.jpg';
 
 interface NavbarProps {
   activeTab: string;
@@ -41,7 +42,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               {/* Official Club Logo Emblem */}
               <div className="relative w-9 h-9 sm:w-11 sm:h-11 rounded-full p-0.5 bg-gradient-to-tr from-amber-400 via-blue-600 to-indigo-700 shadow-md shadow-blue-500/25 group-hover:scale-105 transition-transform shrink-0 overflow-hidden">
                 <img
-                  src="/src/assets/images/official_club_logo.jpg"
+                  src={officialClubLogo}
                   alt="The Bridge Club Official Logo"
                   className="w-full h-full object-contain rounded-full bg-white"
                 />
