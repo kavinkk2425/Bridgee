@@ -51,14 +51,16 @@ export interface ScheduleItem {
 
 export interface Coordinator {
   id: string;
+  sNo: number;
   name: string;
   role: string;
   category: string;
   department: string;
+  year: string;
   initials: string;
   email: string;
   linkedin?: string;
-  responsibilities: string[];
+  responsibilities?: string[];
 }
 
 export interface RoleResponsibility {
@@ -141,90 +143,267 @@ export const OFFICIAL_POSTER_INFO = {
 export const CLUB_COORDINATORS: Coordinator[] = [
   {
     id: 'coord-1',
-    name: 'Kavin Kumar',
-    role: 'Student President & Lead Coordinator',
-    category: 'Executive Council',
-    department: 'Final Year, Computer Science & Engineering',
-    initials: 'KK',
-    email: 'kavinkumar@gceerode.ac.in',
-    linkedin: 'https://linkedin.com',
-    responsibilities: [
-      'Overall management of student core committee and club operations',
-      'Conducting weekly executive syncs and strategic program reviews',
-      'Monitoring mentorship slot bookings and student feedback'
-    ]
+    sNo: 1,
+    role: 'Lead Convenor',
+    name: 'Manicka Meenakshi V',
+    department: 'Automobile Engineering',
+    year: 'Year III',
+    category: 'Convenors',
+    initials: 'MM',
+    email: 'man08kg24a@gmail.com'
   },
   {
     id: 'coord-2',
-    name: 'Archana R.',
-    role: 'Vice President & Mentorship Operations Lead',
-    category: 'Executive Council',
-    department: 'Final Year, Electronics & Communication',
-    initials: 'AR',
-    email: 'archana.r@gceerode.ac.in',
-    linkedin: 'https://linkedin.com',
-    responsibilities: [
-      'Coordinating 1:1 mock interview bookings and mentor schedules',
-      'Publishing post-session feedback scorecards and attendance logs',
-      'Managing student helpdesk and query resolutions'
-    ]
+    sNo: 2,
+    role: 'Deputy Convenor',
+    name: 'Kavin Kumar E',
+    department: 'Information Technology',
+    year: 'Year III',
+    category: 'Convenors',
+    initials: 'KK',
+    email: 'kavinofficial12345@gmail.com'
   },
   {
     id: 'coord-3',
-    name: 'Dinesh V.',
-    role: 'Technical & Innovation Tracks Lead',
-    category: 'Technical Lead',
-    department: 'Third Year, Information Technology',
-    initials: 'DV',
-    email: 'dinesh.v@gceerode.ac.in',
-    linkedin: 'https://linkedin.com',
-    responsibilities: [
-      'Organizing coding hackathons, technical roadmaps & skill workshops',
-      'Managing student project teardowns and portfolio reviews',
-      'Curating ATS-friendly resume templates and tech repositories'
-    ]
+    sNo: 3,
+    role: 'Deputy Convenor',
+    name: 'Bharath R',
+    department: 'Mechanical Engineering',
+    year: 'Year III',
+    category: 'Convenors',
+    initials: 'BR',
+    email: 'bharathrajarambharath@gmail.com'
   },
   {
     id: 'coord-4',
-    name: 'Praveen S.',
-    role: 'Student General Secretary & Event Operations',
-    category: 'Operations Lead',
-    department: 'Final Year, Mechanical Engineering',
-    initials: 'PS',
-    email: 'praveen.s@gceerode.ac.in',
-    responsibilities: [
-      'Managing campus event logistics, auditorium setups, and workshop venues',
-      'Coordinating offline student attendance and volunteer committees',
-      'Documenting council meeting minutes and administrative records'
-    ]
+    sNo: 4,
+    role: 'Operations and Communication Coordinator',
+    name: 'Guruveni C',
+    department: 'Electronics & Communication',
+    year: 'Year III',
+    category: 'Operations & Comms',
+    initials: 'GC',
+    email: 'veniguru51@gmail.com'
   },
   {
     id: 'coord-5',
-    name: 'Sneha M.',
-    role: 'Alumni Outreach & Student Liaison Lead',
-    category: 'Outreach Lead',
-    department: 'Third Year, Electrical & Electronics Engineering',
-    initials: 'SM',
-    email: 'sneha.m@gceerode.ac.in',
-    responsibilities: [
-      'Liaising with global alumni mentors and onboarding session hosts',
-      'Circulating corporate referral announcements and job leads',
-      'Managing student inquiries regarding mentor domain specializations'
-    ]
+    sNo: 5,
+    role: 'Operations and Communication Coordinator',
+    name: 'Brindha K',
+    department: 'Electrical & Electronics',
+    year: 'Year III',
+    category: 'Operations & Comms',
+    initials: 'BK',
+    email: 'brindhakaruppasamybrindha@gmail.com'
   },
   {
     id: 'coord-6',
-    name: 'Rahul K.',
-    role: 'Design, Media & Communications Lead',
-    category: 'Media & Comms',
-    department: 'Final Year, Civil Engineering',
-    initials: 'RK',
-    email: 'rahul.k@gceerode.ac.in',
-    responsibilities: [
-      'Designing official club visual assets, banners, and digital creatives',
-      'Running official student communications and social announcements',
-      'Capturing high-resolution photo/video archives of club ceremonies'
-    ]
+    sNo: 6,
+    role: 'Career and Placement Coordinator',
+    name: 'Dharshini R',
+    department: 'Information Technology',
+    year: 'Year III',
+    category: 'Career & Placement',
+    initials: 'DR',
+    email: 'dharshiniramakrishnan05@gmail.com'
+  },
+  {
+    id: 'coord-7',
+    sNo: 7,
+    role: 'Career and Placement Coordinator',
+    name: 'Abdul Rahip R',
+    department: 'Electrical & Electronics',
+    year: 'Year III',
+    category: 'Career & Placement',
+    initials: 'AR',
+    email: 'rahiprahim7@gmail.com'
+  },
+  {
+    id: 'coord-8',
+    sNo: 8,
+    role: 'Learning and Activities Coordinator',
+    name: 'Afridh Kareem M',
+    department: 'CSE (Data Science)',
+    year: 'Year II',
+    category: 'Learning & Activities',
+    initials: 'AK',
+    email: 'afridhkareem@gmail.com'
+  },
+  {
+    id: 'coord-9',
+    sNo: 9,
+    role: 'Learning and Activities Coordinator',
+    name: 'Rithani J',
+    department: 'Civil Engineering',
+    year: 'Year III',
+    category: 'Learning & Activities',
+    initials: 'RJ',
+    email: 'rithanijegadeeshwaran101@gmail.com'
+  },
+  {
+    id: 'coord-10',
+    sNo: 10,
+    role: 'Finance and Budget Coordinator',
+    name: 'Thamizhiniyal T S',
+    department: 'Mechanical Engineering',
+    year: 'Year III',
+    category: 'Finance & Budget',
+    initials: 'TT',
+    email: 'thamizhiniyal6@gmail.com'
+  },
+  {
+    id: 'coord-11',
+    sNo: 11,
+    role: 'Finance and Budget Coordinator',
+    name: 'Sathish Babu S',
+    department: 'Electronics & Communication',
+    year: 'Year III',
+    category: 'Finance & Budget',
+    initials: 'SB',
+    email: 'sathishsrinivasan9597@gmail.com'
+  },
+  {
+    id: 'coord-12',
+    sNo: 12,
+    role: 'Department Coordinator',
+    name: 'M Immanuvel',
+    department: 'Civil Engineering',
+    year: 'Year II',
+    category: 'Department Coordinators',
+    initials: 'MI',
+    email: 'imman2008uvel@gmail.com'
+  },
+  {
+    id: 'coord-13',
+    sNo: 13,
+    role: 'Department Coordinator',
+    name: 'Parkavi',
+    department: 'Computer Science & Engineering',
+    year: 'Year II',
+    category: 'Department Coordinators',
+    initials: 'PK',
+    email: 'parkavikncse@gmail.com'
+  },
+  {
+    id: 'coord-14',
+    sNo: 14,
+    role: 'Department Coordinator',
+    name: 'Sivakumaran S',
+    department: 'Mechanical Engineering',
+    year: 'Year II',
+    category: 'Department Coordinators',
+    initials: 'SS',
+    email: 'siva008kumaran@gmail.com'
+  },
+  {
+    id: 'coord-15',
+    sNo: 15,
+    role: 'Department Coordinator',
+    name: 'Deepiga V',
+    department: 'Computer Science & Engineering',
+    year: 'Year III',
+    category: 'Department Coordinators',
+    initials: 'DV',
+    email: 'deepiga.uv@gmail.com'
+  },
+  {
+    id: 'coord-16',
+    sNo: 16,
+    role: 'Department Coordinator',
+    name: 'Keerthana B',
+    department: 'Mechanical Engineering',
+    year: 'Year II',
+    category: 'Department Coordinators',
+    initials: 'KB',
+    email: 'keerthanaboopesh104@gmail.com'
+  },
+  {
+    id: 'coord-17',
+    sNo: 17,
+    role: 'Department Coordinator',
+    name: 'Varsha M',
+    department: 'CSE (Data Science)',
+    year: 'Year II',
+    category: 'Department Coordinators',
+    initials: 'VM',
+    email: 'savarsha1992@gmail.com'
+  },
+  {
+    id: 'coord-18',
+    sNo: 18,
+    role: 'Department Coordinator',
+    name: 'A. Arockia Rithisha',
+    department: 'Civil Engineering',
+    year: 'Year II',
+    category: 'Department Coordinators',
+    initials: 'AR',
+    email: 'arockiarithisha@gmail.com'
+  },
+  {
+    id: 'coord-19',
+    sNo: 19,
+    role: 'Department Coordinator',
+    name: 'S. B. Actchaya',
+    department: 'Automobile Engineering',
+    year: 'Year II',
+    category: 'Department Coordinators',
+    initials: 'SA',
+    email: 'actchaya04@gmail.com'
+  },
+  {
+    id: 'coord-20',
+    sNo: 20,
+    role: 'Department Coordinator',
+    name: 'Rashmi',
+    department: 'Information Technology',
+    year: 'Year II',
+    category: 'Department Coordinators',
+    initials: 'RS',
+    email: 'rashmirajasingh03@gmail.com'
+  },
+  {
+    id: 'coord-21',
+    sNo: 21,
+    role: 'Department Coordinator',
+    name: 'Gurusaran',
+    department: 'Information Technology',
+    year: 'Year II',
+    category: 'Department Coordinators',
+    initials: 'GS',
+    email: '2626gurusaran@gmail.com'
+  },
+  {
+    id: 'coord-22',
+    sNo: 22,
+    role: 'Department Coordinator',
+    name: 'Kishorraajan V N',
+    department: 'Automobile Engineering',
+    year: 'Year III',
+    category: 'Department Coordinators',
+    initials: 'KN',
+    email: 'kishorraajank@gmail.com'
+  },
+  {
+    id: 'coord-23',
+    sNo: 23,
+    role: 'Department Coordinator',
+    name: 'Bala Priya P',
+    department: 'Electrical & Electronics',
+    year: 'Year II',
+    category: 'Department Coordinators',
+    initials: 'BP',
+    email: 'balapriya362@gmail.com'
+  },
+  {
+    id: 'coord-24',
+    sNo: 24,
+    role: 'Department Coordinator',
+    name: 'Mohamed Fayas S A',
+    department: 'Electrical & Electronics',
+    year: 'Year III',
+    category: 'Department Coordinators',
+    initials: 'MF',
+    email: 'mdfayas536@gmail.com'
   }
 ];
 
