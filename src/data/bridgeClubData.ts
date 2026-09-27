@@ -53,9 +53,9 @@ export interface Coordinator {
   id: string;
   name: string;
   role: string;
-  category: 'Faculty Patron' | 'Student Lead' | 'Alumni Liaison';
+  category: string;
   department: string;
-  avatar: string;
+  initials: string;
   email: string;
   linkedin?: string;
   responsibilities: string[];
@@ -141,89 +141,89 @@ export const OFFICIAL_POSTER_INFO = {
 export const CLUB_COORDINATORS: Coordinator[] = [
   {
     id: 'coord-1',
-    name: 'Prof. K. V. Ramanathan',
-    role: 'Principal & Chief Patron',
-    category: 'Faculty Patron',
-    department: 'Institutional Governance, GCE Erode',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
-    email: 'principal@gceerode.ac.in',
-    responsibilities: [
-      'Overall institutional leadership and vision',
-      'Strategic alignment between college administration and alumni network',
-      'Patronizing flagship annual student-alumni conventions'
-    ]
-  },
-  {
-    id: 'coord-2',
-    name: 'Dr. S. Meenakshi',
-    role: 'Faculty Staff Coordinator',
-    category: 'Faculty Patron',
-    department: 'Department of Computer Science & Student Affairs',
-    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80',
-    email: 'meenakshi.s@gceerode.ac.in',
-    responsibilities: [
-      'Faculty oversight and academic alignment',
-      'Coordinating campus auditoriums, labs, and workshop venues',
-      'Facilitating official student executive elections and governance'
-    ]
-  },
-  {
-    id: 'coord-3',
-    name: 'Er. M. Karthik',
-    role: 'Alumni Association Liaison Officer',
-    category: 'Alumni Liaison',
-    department: 'IRTT Alumni Association Executive Board',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
-    email: 'alumni.liaison@gceerode.ac.in',
-    responsibilities: [
-      'Connecting global alumni chapters with student leads',
-      'Verifying alumni mentor profiles and industry credentials',
-      'Managing corporate job referral pipelines'
-    ]
-  },
-  {
-    id: 'coord-4',
     name: 'Kavin Kumar',
     role: 'Student President & Lead Coordinator',
-    category: 'Student Lead',
+    category: 'Executive Council',
     department: 'Final Year, Computer Science & Engineering',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
+    initials: 'KK',
     email: 'kavinkumar@gceerode.ac.in',
     linkedin: 'https://linkedin.com',
     responsibilities: [
-      'Overall management of student core committee and operations',
-      'Conducting weekly executive syncs with faculty patrons',
+      'Overall management of student core committee and club operations',
+      'Conducting weekly executive syncs and strategic program reviews',
       'Monitoring mentorship slot bookings and student feedback'
     ]
   },
   {
-    id: 'coord-5',
+    id: 'coord-2',
     name: 'Archana R.',
     role: 'Vice President & Mentorship Operations Lead',
-    category: 'Student Lead',
+    category: 'Executive Council',
     department: 'Final Year, Electronics & Communication',
-    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80',
+    initials: 'AR',
     email: 'archana.r@gceerode.ac.in',
     linkedin: 'https://linkedin.com',
     responsibilities: [
       'Coordinating 1:1 mock interview bookings and mentor schedules',
-      'Publishing post-session feedback scorecards',
+      'Publishing post-session feedback scorecards and attendance logs',
       'Managing student helpdesk and query resolutions'
     ]
   },
   {
-    id: 'coord-6',
+    id: 'coord-3',
     name: 'Dinesh V.',
     role: 'Technical & Innovation Tracks Lead',
-    category: 'Student Lead',
+    category: 'Technical Lead',
     department: 'Third Year, Information Technology',
-    avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80',
+    initials: 'DV',
     email: 'dinesh.v@gceerode.ac.in',
     linkedin: 'https://linkedin.com',
     responsibilities: [
       'Organizing coding hackathons, technical roadmaps & skill workshops',
       'Managing student project teardowns and portfolio reviews',
-      'Curating ATS-friendly resume templates'
+      'Curating ATS-friendly resume templates and tech repositories'
+    ]
+  },
+  {
+    id: 'coord-4',
+    name: 'Praveen S.',
+    role: 'Student General Secretary & Event Operations',
+    category: 'Operations Lead',
+    department: 'Final Year, Mechanical Engineering',
+    initials: 'PS',
+    email: 'praveen.s@gceerode.ac.in',
+    responsibilities: [
+      'Managing campus event logistics, auditorium setups, and workshop venues',
+      'Coordinating offline student attendance and volunteer committees',
+      'Documenting council meeting minutes and administrative records'
+    ]
+  },
+  {
+    id: 'coord-5',
+    name: 'Sneha M.',
+    role: 'Alumni Outreach & Student Liaison Lead',
+    category: 'Outreach Lead',
+    department: 'Third Year, Electrical & Electronics Engineering',
+    initials: 'SM',
+    email: 'sneha.m@gceerode.ac.in',
+    responsibilities: [
+      'Liaising with global alumni mentors and onboarding session hosts',
+      'Circulating corporate referral announcements and job leads',
+      'Managing student inquiries regarding mentor domain specializations'
+    ]
+  },
+  {
+    id: 'coord-6',
+    name: 'Rahul K.',
+    role: 'Design, Media & Communications Lead',
+    category: 'Media & Comms',
+    department: 'Final Year, Civil Engineering',
+    initials: 'RK',
+    email: 'rahul.k@gceerode.ac.in',
+    responsibilities: [
+      'Designing official club visual assets, banners, and digital creatives',
+      'Running official student communications and social announcements',
+      'Capturing high-resolution photo/video archives of club ceremonies'
     ]
   }
 ];

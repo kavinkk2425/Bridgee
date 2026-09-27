@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Mail, Linkedin, ShieldCheck } from 'lucide-react';
+import { Mail, Linkedin, GraduationCap } from 'lucide-react';
 import { CLUB_COORDINATORS } from '../data/bridgeClubData';
 
 export const CoordinatorsSection: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>('All');
 
-  const categories = ['All', 'Faculty Patron', 'Student Lead', 'Alumni Liaison'];
+  const categories = ['All', 'Executive Council', 'Technical Lead', 'Operations Lead', 'Outreach Lead', 'Media & Comms'];
 
   const filteredCoordinators = selectedFilter === 'All'
     ? CLUB_COORDINATORS
@@ -17,14 +17,14 @@ export const CoordinatorsSection: React.FC = () => {
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto space-y-3 mb-8 sm:mb-10">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-150 text-emerald-600 text-xs font-extrabold uppercase tracking-wider font-sans">
-          <ShieldCheck className="w-3.5 h-3.5" />
-          <span>CLUB LEADERSHIP & PATRONS</span>
+          <GraduationCap className="w-3.5 h-3.5" />
+          <span>STUDENT COORDINATORS & EXECUTIVE COUNCIL</span>
         </div>
         <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight font-sans">
-          Meet Our <span className="text-emerald-600">Coordinators</span>
+          Meet Our <span className="text-emerald-600">Student Coordinators</span>
         </h2>
         <p className="text-xs sm:text-base text-slate-500 leading-relaxed font-sans max-w-2xl mx-auto">
-          The team of institutional leaders, alumni liaisons, and student executives driving The Bridge Club forward.
+          The elected student executive committee and department coordinators driving The Bridge Club initiatives across all engineering branches.
         </p>
       </div>
 
@@ -58,23 +58,20 @@ export const CoordinatorsSection: React.FC = () => {
             className="bg-white border border-slate-200/80 hover:border-emerald-400 rounded-3xl p-5 sm:p-6 flex flex-col justify-between shadow-xs hover:shadow-xl transition-all group"
           >
             <div className="space-y-4">
-              {/* Top Header */}
+              {/* Top Header - Pure Typography & Initials Badge (No Photos) */}
               <div className="flex items-start gap-3.5">
-                <img
-                  src={coord.avatar}
-                  alt={coord.name}
-                  className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl object-cover border-2 border-slate-150 group-hover:border-emerald-500 transition-colors shadow-xs shrink-0"
-                />
-                <div className="space-y-1 min-w-0">
-                  <span className={`inline-block text-[10px] font-black uppercase px-2 py-0.5 rounded-md ${
-                    coord.category === 'Faculty Patron'
-                      ? 'bg-purple-100 text-purple-700'
-                      : coord.category === 'Alumni Liaison'
-                      ? 'bg-amber-100 text-amber-800'
-                      : 'bg-blue-100 text-blue-700'
-                  }`}>
-                    {coord.category}
-                  </span>
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-blue-700 text-white font-extrabold text-sm flex items-center justify-center shrink-0 shadow-sm border border-blue-200/50 group-hover:scale-105 transition-transform font-sans">
+                  {coord.initials}
+                </div>
+                <div className="space-y-1 min-w-0 flex-1">
+                  <div className="flex items-center gap-2">
+                    <span className="inline-block text-[10px] font-black uppercase px-2 py-0.5 rounded-md bg-blue-100 text-blue-700 font-sans tracking-wide">
+                      STUDENT LEAD
+                    </span>
+                    <span className="text-[10px] font-bold text-slate-400 font-sans truncate">
+                      {coord.category}
+                    </span>
+                  </div>
                   <h3 className="text-base sm:text-lg font-bold text-slate-900 leading-snug font-sans truncate">
                     {coord.name}
                   </h3>
