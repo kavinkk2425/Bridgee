@@ -21,7 +21,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({ isLoading }) => {
 
       {/* Center Loader Content - Pure Typography & Cyber Monospace Loader (No Images) */}
       <div className="flex flex-col items-center justify-center text-center max-w-lg w-full space-y-7">
-        
+
         {/* Bridge Club Badge & Institution Text */}
         <motion.div
           initial={{ y: 12, opacity: 0 }}
@@ -51,12 +51,9 @@ export const PageLoader: React.FC<PageLoaderProps> = ({ isLoading }) => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.35, delay: 0.15 }}
-          className="py-3.5 px-7 rounded-2xl bg-slate-50/90 border border-slate-200/80 shadow-2xs flex flex-col items-center justify-center gap-2"
+          className="py-3 px-7 rounded-2xl bg-slate-50/90 border border-slate-200/80 shadow-2xs flex items-center justify-center"
         >
           <div className="cyber-glyph-loader"></div>
-          <span className="text-[10.5px] font-bold text-slate-400 uppercase tracking-widest font-mono">
-            Initializing Portal
-          </span>
         </motion.div>
 
         {/* Bottom subtle progress line */}
