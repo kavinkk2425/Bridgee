@@ -73,23 +73,28 @@ export const HeroInauguration: React.FC<HeroInaugurationProps> = ({
             transition={{ duration: 0.7, ease: 'easeOut' }}
             className="lg:col-span-6 space-y-5 sm:space-y-7 text-left w-full"
           >
-            {/* Kicker Tag with Official Logo Badge */}
+            {/* Kicker Tag with Official College Badge */}
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="inline-flex items-center gap-2.5 max-w-full"
+              className="inline-flex items-center gap-2.5 sm:gap-3 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-2xl bg-blue-50/90 border border-blue-200/90 shadow-2xs max-w-full"
             >
-              <div className="w-8 h-8 rounded-full p-0.5 bg-gradient-to-tr from-amber-400 via-blue-600 to-indigo-700 shadow-sm shrink-0 overflow-hidden">
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full p-0.5 bg-gradient-to-tr from-amber-400 via-blue-600 to-indigo-700 shadow-sm shrink-0 overflow-hidden ring-2 ring-blue-100">
                 <img
                   src={OFFICIAL_POSTER_INFO.logoImage}
                   alt="Official Bridge Club Logo"
                   className="w-full h-full object-contain rounded-full bg-white"
                 />
               </div>
-              <span className="text-[10px] sm:text-xs font-extrabold tracking-[0.12em] sm:tracking-[0.16em] text-blue-600 uppercase font-sans break-words">
-                GOVERNMENT COLLEGE OF ENGINEERING, ERODE (FORMERLY IRTT)
-              </span>
+              <div className="flex flex-col text-left min-w-0">
+                <span className="text-[12px] sm:text-sm font-black tracking-tight sm:tracking-wide text-blue-700 uppercase font-sans leading-tight">
+                  GOVERNMENT COLLEGE OF ENGINEERING, ERODE
+                </span>
+                <span className="text-[10px] sm:text-xs font-black tracking-wider text-slate-500 uppercase font-sans mt-0.5">
+                  (FORMERLY IRTT)
+                </span>
+              </div>
             </motion.div>
 
             {/* Dynamic Headline with Animated Professional Club Titles */}
