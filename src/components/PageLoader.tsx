@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import officialClubLogo from '../assets/images/official_club_logo.jpg';
+import collegeEmblem from '../assets/images/gce_erode_college_emblem.png';
 
 interface PageLoaderProps {
   isLoading: boolean;
@@ -23,22 +24,32 @@ export const PageLoader: React.FC<PageLoaderProps> = ({ isLoading }) => {
       {/* Center Loader Card */}
       <div className="flex flex-col items-center justify-center text-center max-w-lg w-full space-y-6">
         
-        {/* Official Bridge Club Seal with Glowing Border */}
+        {/* Official College Emblem & Bridge Club Seal */}
         <motion.div
           initial={{ scale: 0.85, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="relative"
+          className="flex items-center justify-center gap-3.5 sm:gap-5"
         >
-          <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-tr from-amber-400 via-blue-600 to-indigo-700 shadow-xl shadow-blue-500/25 shrink-0 overflow-hidden ring-4 ring-blue-100/80">
+          {/* Government College of Engineering, Erode Official Crest */}
+          <div className="w-16 h-20 sm:w-20 sm:h-24 p-1.5 bg-white rounded-2xl border-2 border-blue-200/90 shadow-lg shadow-blue-500/10 flex items-center justify-center shrink-0 ring-2 ring-blue-50">
+            <img
+              src={collegeEmblem}
+              alt="Government College of Engineering, Erode Official Seal"
+              className="w-full h-full object-contain"
+            />
+          </div>
+
+          <div className="w-0.5 h-12 bg-slate-200 rounded-full" />
+
+          {/* Bridge Club Seal */}
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full p-1 bg-gradient-to-tr from-amber-400 via-blue-600 to-indigo-700 shadow-lg shadow-blue-500/20 shrink-0 overflow-hidden ring-4 ring-blue-100/80">
             <img
               src={officialClubLogo}
               alt="The Bridge Club Official Emblem"
               className="w-full h-full object-contain rounded-full bg-white"
             />
           </div>
-          {/* Subtle live radar ping */}
-          <div className="absolute -inset-1 rounded-full border border-blue-400/40 animate-ping pointer-events-none" />
         </motion.div>
 
         {/* Bridge Club Title & Large College Name */}

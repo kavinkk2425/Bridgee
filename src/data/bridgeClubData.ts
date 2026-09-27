@@ -1,5 +1,6 @@
 import officialClubLogo from '../assets/images/official_club_logo.jpg';
 import officialEventPoster from '../assets/images/official_event_poster.jpg';
+import collegeEmblem from '../assets/images/gce_erode_college_emblem.png';
 
 export interface SurveyOption {
   id: string;
@@ -80,6 +81,7 @@ export const OFFICIAL_POSTER_INFO = {
   subMotto: 'Together We Learn · Together We Grow',
   mission: 'A student-led club that connects students, staff and alumni to accelerate learning, careers and opportunities.',
   logoImage: officialClubLogo,
+  collegeEmblem: collegeEmblem,
   posterImage: officialEventPoster,
   eventDate: '28th Sep 26 (Monday)',
   eventTime: '9.30 AM – 12.30 PM',

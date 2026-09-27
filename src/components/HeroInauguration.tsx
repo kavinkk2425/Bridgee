@@ -78,20 +78,22 @@ export const HeroInauguration: React.FC<HeroInaugurationProps> = ({
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="inline-flex items-center gap-2.5 sm:gap-3 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-2xl bg-blue-50/90 border border-blue-200/90 shadow-2xs max-w-full"
+              className="inline-flex items-center gap-3 sm:gap-4 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl bg-white border-2 border-blue-200/90 shadow-sm max-w-full"
             >
-              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full p-0.5 bg-gradient-to-tr from-amber-400 via-blue-600 to-indigo-700 shadow-sm shrink-0 overflow-hidden ring-2 ring-blue-100">
+              {/* Official College Emblem Image - Clearly Visible */}
+              <div className="w-11 h-14 sm:w-14 sm:h-16 shrink-0 flex items-center justify-center p-0.5 bg-white rounded-xl">
                 <img
-                  src={OFFICIAL_POSTER_INFO.logoImage}
-                  alt="Official Bridge Club Logo"
-                  className="w-full h-full object-contain rounded-full bg-white"
+                  src={OFFICIAL_POSTER_INFO.collegeEmblem}
+                  alt="Government College of Engineering, Erode Official Seal"
+                  className="w-full h-full object-contain filter drop-shadow-2xs"
                 />
               </div>
+
               <div className="flex flex-col text-left min-w-0">
-                <span className="text-[12px] sm:text-sm font-black tracking-tight sm:tracking-wide text-blue-700 uppercase font-sans leading-tight">
+                <span className="text-[12.5px] sm:text-base font-black tracking-tight sm:tracking-wide text-blue-900 uppercase font-sans leading-tight">
                   GOVERNMENT COLLEGE OF ENGINEERING, ERODE
                 </span>
-                <span className="text-[10px] sm:text-xs font-black tracking-wider text-slate-500 uppercase font-sans mt-0.5">
+                <span className="text-[10.5px] sm:text-xs font-black tracking-wider text-blue-600 uppercase font-sans mt-0.5">
                   (FORMERLY IRTT)
                 </span>
               </div>
