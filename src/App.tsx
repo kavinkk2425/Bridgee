@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion, useScroll } from 'motion/react';
+import { motion, useScroll, AnimatePresence } from 'motion/react';
+import { PageLoader } from './components/PageLoader';
 import { Navbar } from './components/Navbar';
 import { HeroInauguration } from './components/HeroInauguration';
 import { HowItWorksSection } from './components/HowItWorksSection';
@@ -9,8 +10,17 @@ import { SurveyAnalytics } from './components/SurveyAnalytics';
 import { Footer } from './components/Footer';
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [activeTab, setActiveTab] = useState<string>('about');
   const [posterLightboxOpen, setPosterLightboxOpen] = useState(false);
+
+  useEffect(() => {
+    // Show custom pegtop loader before entering the page
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1600);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Lightweight scroll progress bar
   const { scrollYProgress } = useScroll();
@@ -60,6 +70,11 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#f8fbff] text-slate-900 font-sans selection:bg-blue-600 selection:text-white flex flex-col justify-between relative">
       
+      {/* Intro Page Loader */}
+      <AnimatePresence>
+        {isLoading && <PageLoader isLoading={isLoading} />}
+      </AnimatePresence>
+
       {/* Lightweight GPU-Accelerated Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-500 origin-left z-50 shadow-xs gpu-layer"
