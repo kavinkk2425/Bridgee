@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Mail, GraduationCap, Search, CheckCircle2, ChevronDown, ChevronUp, Users, Filter } from 'lucide-react';
+import { GraduationCap, Search, CheckCircle2, ChevronDown, ChevronUp, Users, Filter } from 'lucide-react';
 import { CLUB_COORDINATORS } from '../data/bridgeClubData';
 
 export const CoordinatorsSection: React.FC = () => {
@@ -42,7 +42,6 @@ export const CoordinatorsSection: React.FC = () => {
         c.name.toLowerCase().includes(q) ||
         c.role.toLowerCase().includes(q) ||
         c.department.toLowerCase().includes(q) ||
-        c.email.toLowerCase().includes(q) ||
         c.year.toLowerCase().includes(q);
 
       return matchesCategory && matchesSearch;
@@ -214,18 +213,6 @@ export const CoordinatorsSection: React.FC = () => {
                     {coord.year} · Government College of Engineering, Erode
                   </div>
                 </div>
-              </div>
-
-              {/* Email Contact Action */}
-              <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between font-sans">
-                <a
-                  href={`mailto:${coord.email}`}
-                  className="text-xs text-blue-600 hover:text-blue-800 flex items-center gap-1.5 font-bold transition-colors truncate max-w-full"
-                  title={`Email ${coord.name}`}
-                >
-                  <Mail className="w-3.5 h-3.5 shrink-0" />
-                  <span className="truncate">{coord.email}</span>
-                </a>
               </div>
             </motion.div>
           ))}
