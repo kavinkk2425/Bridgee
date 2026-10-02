@@ -55,7 +55,7 @@ export const OurTeamSection: React.FC = () => {
       </div>
 
       {/* SINGLE COMPLETE MASTER INAUGURATION PHOTO WITH SHADOW & GLOW */}
-      <div className="relative max-w-6xl xl:max-w-7xl mx-auto px-2 sm:px-4">
+      <div className="relative max-w-4xl lg:max-w-5xl mx-auto px-3 sm:px-6">
         {/* Ambient Backlight Halo Glow */}
         <div className="absolute -inset-3 sm:-inset-8 bg-gradient-to-r from-blue-600/30 via-indigo-600/25 to-purple-600/30 rounded-3xl sm:rounded-4xl blur-2xl sm:blur-3xl opacity-85 sm:opacity-100 pointer-events-none -z-10 transition-all duration-500" />
 
