@@ -5,6 +5,7 @@ import { Navbar } from './components/Navbar';
 import { HeroInauguration } from './components/HeroInauguration';
 import { HowItWorksSection } from './components/HowItWorksSection';
 import { RolesResponsibilitiesSection } from './components/RolesResponsibilitiesSection';
+import { OurTeamSection } from './components/OurTeamSection';
 import { CoordinatorsSection } from './components/CoordinatorsSection';
 import { SurveyAnalytics } from './components/SurveyAnalytics';
 import { Footer } from './components/Footer';
@@ -25,9 +26,9 @@ export default function App() {
   // Lightweight scroll progress bar
   const { scrollYProgress } = useScroll();
 
-  // Scroll spy for all 5 portal sections
+  // Scroll spy for all portal sections
   useEffect(() => {
-    const sectionIds = ['about', 'flow', 'roles', 'coordinators', 'survey'];
+    const sectionIds = ['about', 'flow', 'roles', 'team', 'coordinators', 'survey'];
     let ticking = false;
 
     const handleScroll = () => {
@@ -107,7 +108,10 @@ export default function App() {
           {/* 3. Roles & Responsibilities */}
           <RolesResponsibilitiesSection />
 
-          {/* 4. Leadership & Coordinators */}
+          {/* 4. Our Team & Inauguration Gallery */}
+          <OurTeamSection />
+
+          {/* 5. Leadership & Coordinators */}
           <CoordinatorsSection />
 
           {/* 5. Student Survey & Full Empirical Analytics */}

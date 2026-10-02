@@ -57,6 +57,11 @@ export const Footer: React.FC<FooterProps> = ({
                 </button>
               </li>
               <li>
+                <button onClick={() => setActiveTab('team')} className="hover:text-blue-600 transition-colors cursor-pointer">
+                  Our Team & Inauguration Gallery
+                </button>
+              </li>
+              <li>
                 <button onClick={() => setActiveTab('coordinators')} className="hover:text-blue-600 transition-colors cursor-pointer">
                   Leadership & Coordinators
                 </button>
