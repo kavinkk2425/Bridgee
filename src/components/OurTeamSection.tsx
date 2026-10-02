@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  X, 
-  Calendar, 
-  MapPin, 
+import {
+  X,
+  Calendar,
+  MapPin,
   Maximize2
 } from 'lucide-react';
 
@@ -14,8 +14,8 @@ export const OurTeamSection: React.FC = () => {
   const [isLightboxOpen, setIsLightboxOpen] = useState<boolean>(false);
 
   return (
-    <section 
-      id="team" 
+    <section
+      id="team"
       className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 scroll-mt-20 overflow-hidden"
     >
       {/* Decorative Ambient Glow Orbs */}
@@ -24,7 +24,7 @@ export const OurTeamSection: React.FC = () => {
 
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4 mb-10 sm:mb-14">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -33,7 +33,7 @@ export const OurTeamSection: React.FC = () => {
           <span>Our Team & Inauguration</span>
         </motion.div>
 
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -43,7 +43,7 @@ export const OurTeamSection: React.FC = () => {
           Moments of <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">Inauguration</span> & The Team
         </motion.h2>
 
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -55,12 +55,12 @@ export const OurTeamSection: React.FC = () => {
       </div>
 
       {/* SINGLE COMPLETE MASTER INAUGURATION PHOTO WITH SHADOW & GLOW */}
-      <div className="relative max-w-4xl lg:max-w-5xl mx-auto px-3 sm:px-6">
+      <div className="relative max-w-6xl xl:max-w-7xl mx-auto px-2 sm:px-4">
         {/* Ambient Backlight Halo Glow */}
         <div className="absolute -inset-3 sm:-inset-8 bg-gradient-to-r from-blue-600/30 via-indigo-600/25 to-purple-600/30 rounded-3xl sm:rounded-4xl blur-2xl sm:blur-3xl opacity-85 sm:opacity-100 pointer-events-none -z-10 transition-all duration-500" />
 
         {/* Master Image Frame Container */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -71,7 +71,7 @@ export const OurTeamSection: React.FC = () => {
           }}
         >
           {/* Main Official Image - 100% Clean & Completely Unobstructed */}
-          <div 
+          <div
             onClick={() => setIsLightboxOpen(true)}
             className="relative aspect-16/9 w-full overflow-hidden bg-slate-950 cursor-pointer flex items-center justify-center"
           >
@@ -152,12 +152,12 @@ export const OurTeamSection: React.FC = () => {
                 <X className="w-5 h-5" />
               </button>
 
-              {/* Full Image */}
-              <div className="relative aspect-16/10 max-h-[75vh] bg-black flex items-center justify-center overflow-hidden">
+              {/* Full Image - Natural Fit with Zero Black Gap */}
+              <div className="relative w-full flex items-center justify-center overflow-hidden bg-slate-950">
                 <img
                   src={inaugurationTeamImg}
                   alt="Bridge Club Inauguration Function Team Photo"
-                  className="w-full h-full object-contain"
+                  className="w-full h-auto max-h-[75vh] object-contain block"
                 />
               </div>
 
